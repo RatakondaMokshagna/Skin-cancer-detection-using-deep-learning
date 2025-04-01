@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skin Cancer Detection</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Skin Cancer Detection</h1>
+        <p>Upload an image to classify as <strong>Benign</strong> or <strong>Malignant</strong>.</p>
+
+        <form action="/" method="post" enctype="multipart/form-data">
+            <input type="file" name="file" required>
+            <button type="submit">Upload & Detect</button>
+        </form>
+
+        {% if prediction %}
+            <div class="result">
+                <h2>Prediction: <span class="{{ 'malignant' if prediction == 'Malignant' else 'benign' }}">{{ prediction }}</span></h2>
+                <h3>Status: <span class="{{ 'harmful' if harmful == 'Harmful' else 'not-harmful' }}">{{ harmful }}</span></h3>
+                <p><strong>Explanation:</strong> {{ explanation }}</p>
+                <img src="{{ image }}" alt="Uploaded Image">
+            </div>
+        {% endif %}
+    </div>
+</body>
+</html>

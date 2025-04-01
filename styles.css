@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap');
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #121212;
+    color: white;
+    text-align: center;
+    padding: 50px;
+}
+
+.container {
+    max-width: 600px;
+    margin: auto;
+    background: linear-gradient(135deg, #ff6f61, #ff9800);
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 0 20px rgba(255, 105, 135, 0.3);
+}
+
+h1 {
+    font-size: 28px;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+p {
+    font-size: 16px;
+    font-weight: 300;
+}
+
+form {
+    margin-top: 20px;
+}
+
+input[type="file"] {
+    padding: 12px;
+    border: none;
+    background: white;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+button {
+    background: #ffd700;
+    color: black;
+    border: none;
+    padding: 12px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s;
+    border-radius: 6px;
+}
+
+button:hover {
+    background: #ffeb3b;
+    transform: scale(1.05);
+}
+
+.result {
+    margin-top: 20px;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 8px;
+}
+
+.malignant {
+    color: #ff4444;
+    font-weight: bold;
+}
+
+.benign {
+    color: #00ff99;
+    font-weight: bold;
+}
+
+.harmful {
+    color: red;
+    font-weight: bold;
+}
+
+.not-harmful {
+    color: rgb(25, 58, 190);
+    font-weight: bold;
+}
+
+img {
+    margin-top: 20px;
+    width: 100%;
+    max-width: 350px;
+    border-radius: 12px;
+    border: 3px solid white;
+}
